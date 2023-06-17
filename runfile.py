@@ -87,8 +87,7 @@ async def play_stream(_, message: Message, lang):
         k = await message.reply_text(lang["notFound"])
         return await delete_messages([message, k])
     ok, status = await song.parse()
-    print(ok)
-    print(status)
+    
     if not ok:
         raise Exception(status)
     if not group["is_playing"]:

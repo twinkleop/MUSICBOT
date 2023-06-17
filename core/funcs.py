@@ -67,6 +67,8 @@ async def search(message: Message) -> Optional[Song]:
                 message,
             )
     else:
+        return False
+        """
         query = extract_args(message.text)
         print(query)
     if query == "":
@@ -75,7 +77,7 @@ async def search(message: Message) -> Optional[Song]:
 
     if is_yt_url:
         return Song(url, message)
-    elif config.SPOTIFY and "open.spotify.com/track" in query:
+    if config.SPOTIFY and "open.spotify.com/track" in query:
         track_id = query.split("open.spotify.com/track/")[1].split("?")[0]
         track = sp.track(track_id)
         query = f'{" / ".join([artist["name"] for artist in track["artists"]])} - {track["name"]}'
@@ -89,7 +91,7 @@ async def search(message: Message) -> Optional[Song]:
             video = vs["result"][0]
             return Song(video["link"], message)
     return None
-
+"""
 
 def check_yt_url(text: str) -> Tuple[bool, Optional[str]]:
     pattern = re.compile(

@@ -6,7 +6,7 @@ aiofiles
 pyrogram==1.4.16
 tgcrypto
 python-dotenv
-py-tgcalls==0.8.6
+py-tgcalls==0.8.2
 youtube-search-python
 https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz 
 

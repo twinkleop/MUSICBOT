@@ -93,6 +93,7 @@ async def search(message: Message) -> Optional[Song]:
     return None
 """
 
+
 def check_yt_url(text: str) -> Tuple[bool, Optional[str]]:
     pattern = re.compile(
         "^((?:https?:)?\\/\\/)?((?:www|m)\\.)?((?:youtube\\.com|youtu.be))(\\/(?:[\\w\\-]+\\?v=|embed\\/|v\\/)?)([\\w\\-]+)([a-zA-Z0-9-_]+)?$"

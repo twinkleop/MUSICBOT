@@ -8,6 +8,4 @@ tgcrypto
 python-dotenv
 py-tgcalls==0.8.2
 youtube-search-python
-https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz 
-
-git+https://github.com/asmsafone/downloader
+git+https://github.com/ytdl-patched/yt-dlp
